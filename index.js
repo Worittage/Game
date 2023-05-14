@@ -1,4 +1,5 @@
 let selectedButton = null;
+let levelGame = null
 
   document.querySelectorAll('.content__button').forEach(button => {
     button.addEventListener('click', function() {
@@ -7,8 +8,8 @@ let selectedButton = null;
   });
 
   document.querySelector('#button').addEventListener('click', function() {
+    levelGame = selectedButton.dataset.name
     if (selectedButton) {
-      alert(selectedButton.dataset.name);
-    } else {
-          }
+      alert('вы выбрали уровень' + "\n" + levelGame);
+    } 
   });
